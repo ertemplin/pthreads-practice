@@ -17,8 +17,6 @@ void* method2(void* parameter) {
 }
 
 int main() {
-
-
 	pthread_t thread1, thread2; // Two variables that hold data about each thread.
 
 	pthread_attr_t attr; // Attributes that are used for both threads.
