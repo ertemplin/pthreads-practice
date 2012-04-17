@@ -19,15 +19,17 @@ int method2() {
 int main() {
 
 
-	pthread_t thread1, thread2;
+	pthread_t thread1, thread2; // Two variables that hold data about each thread.
 
-	pthread_attr_t attr;
+	pthread_attr_t attr; // Attributes that are used for both threads.
 	pthread_attr_init(&attr);
 	pthread_attr_setscope(&attr, PTHREAD_SCOPE_SYSTEM);
 
+	// Start execution of the threads
 	pthread_create(&thread1, &attr, *method1, NULL);
 	pthread_create(&thread2, &attr, *method2, NULL);
 
+	// Wait for each thread to finish
 	pthread_join(thread1, NULL);
 	pthread_join(thread2, NULL);
 
