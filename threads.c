@@ -4,13 +4,13 @@
 int val1 = 0;
 int val2 = 0;
 
-void * method1(void *paramater) {
-	for(val1 = 0; val1<1000000000; val1 += 2);
+void* method1(void* paramater) {
+	for(val1 = 0; val1<1000000000; val1++);
 	fprintf(stderr, "Thread1 exiting\n");
 	return;
 }
 
-void * method2(void *parameter) {
+void* method2(void* parameter) {
 	for(val2 = 0; val2<1000000000; val2++);
 	fprintf(stderr, "Thread2 exiting\n");
 	return;
