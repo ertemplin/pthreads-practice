@@ -22,9 +22,9 @@ int main(int argc, char** argv) {
 		}
 	}
 
-	pthread_t threads[numThreads]; // Two variables that hold data about each thread.
+	pthread_t threads[numThreads]; // Variables that hold data about each thread.
 
-	pthread_attr_t attr; // Attributes that are used for both threads.
+	pthread_attr_t attr; // Attributes that are used for all threads.
 	pthread_attr_init(&attr);
 	pthread_attr_setscope(&attr, PTHREAD_SCOPE_SYSTEM);
 
